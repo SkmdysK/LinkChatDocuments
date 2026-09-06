@@ -1,0 +1,19 @@
+{
+  "vector_id": "payload-frame-hello",
+  "protocol_version": "1.0",
+  "cipher_suite": "V1HybridMlKem768",
+  "test_only": true,
+  "inputs": {
+    "payload_utf8": "hello",
+    "payload_hex": "68656c6c6f"
+  },
+  "expected": {
+    "encoded_length": 1291,
+    "prefix_hex": "000568656c6c6f",
+    "zero_suffix_bytes": 1284,
+    "sha256_of_complete_frame": "109dc37ce37ae8dfc67443acda72cbddb457f8c6641f74774aaa290da1b520a3",
+    "decode_payload_hex": "68656c6c6f",
+    "nonzero_suffix": "reject"
+  },
+  "construction": "u16_be(5) || 68656c6c6f || 1284 zero bytes"
+}

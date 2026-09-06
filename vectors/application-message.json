@@ -1,0 +1,21 @@
+{
+  "vector_id": "application-message-v1-session-42",
+  "protocol_version": "1.0",
+  "canonical_format_version": 1,
+  "cipher_suite": "V1HybridMlKem768",
+  "test_only": true,
+  "inputs": {
+    "session_id": 42,
+    "turn": 0,
+    "direction": "Alice",
+    "message_id": 7,
+    "receiver_key_id": 99,
+    "receiver_token_hex": "1111111111111111111111111111111111111111111111111111111111111111",
+    "payload_hex": "68656c6c6f"
+  },
+  "expected": {
+    "encoded_length": 113,
+    "encoded_hex": "01000100010000000800000002000100000008000000000000002a00000008000000000000000000000001000000000800000000000000070000000800000000000000630000002011111111111111111111111111111111111111111111111111111111111111110000000568656c6c6f",
+    "decode_reencode_equal": true
+  }
+}

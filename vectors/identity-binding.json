@@ -1,0 +1,19 @@
+{
+  "vector_id": "identity-binding-session-42",
+  "protocol_version": "1.0",
+  "canonical_format_version": 1,
+  "cipher_suite": "V1HybridMlKem768",
+  "test_only": true,
+  "inputs": {
+    "session_id": 42,
+    "identity_public_key_alice": {"repeat_byte_hex": "66", "length": 32},
+    "identity_public_key_bob": {"repeat_byte_hex": "77", "length": 32}
+  },
+  "expected": {
+    "signed_context_domain": "LinkChat/identity-binding/v1",
+    "identity_signature_input_fields": ["domain", "protocol_major", "protocol_minor", "cipher_suite", "session_id", "identity_public_key_alice", "identity_public_key_bob"],
+    "signature_length": 64,
+    "changed_session_or_identity": "signature verification failure"
+  },
+  "security_boundary": "The vector checks binding construction and signature verification. Ed25519 EUF-CMA security remains an external assumption."
+}

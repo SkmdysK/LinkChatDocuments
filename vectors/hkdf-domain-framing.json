@@ -1,0 +1,16 @@
+{
+  "vector_id": "hkdf-domain-framing-empty-domain",
+  "protocol_version": "1.0",
+  "cipher_suite": "V1HybridMlKem768",
+  "test_only": true,
+  "inputs": {
+    "domain_hex": "",
+    "ikm_hex": "0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b",
+    "expand_info_hex": "f0f1f2f3f4f5f6f7f8f9"
+  },
+  "expected": {
+    "extract_prk_hex": "12f5401c0a26ad74f32c271b14c0be4ea21bb14ca275cb3897502226e5a11556",
+    "expand_32_hex": "07339d00d38b00f3af6c4ba7a775682d2bf03d54b53bf27ee3b99bf135155d85",
+    "domain_framing": "u16_be(domain_length) || domain || u32_be(ikm_length) || ikm"
+  }
+}

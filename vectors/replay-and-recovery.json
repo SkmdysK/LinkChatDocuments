@@ -1,0 +1,38 @@
+{
+  "vector_id": "replay-and-recovery-v1",
+  "protocol_version": "1.0",
+  "cipher_suite": "V1HybridMlKem768",
+  "test_only": true,
+  "cases": [
+    {
+      "name": "past_turn",
+      "input": "previously accepted envelope",
+      "expected_result": "Replay",
+      "state_change": "none"
+    },
+    {
+      "name": "duplicate_message_id",
+      "input": "same authenticated message id after commit",
+      "expected_result": "Duplicate or Replay classification",
+      "state_change": "none"
+    },
+    {
+      "name": "future_turn",
+      "input": "authenticated envelope with turn greater than expected",
+      "expected_result": "FutureTurn",
+      "state_change": "none"
+    },
+    {
+      "name": "uncommitted_pending_after_crash",
+      "input": "pending record without a durable commit marker",
+      "expected_result": "recover old current",
+      "state_change": "old current remains published"
+    },
+    {
+      "name": "committed_marker_after_crash",
+      "input": "complete pending record and matching durable marker",
+      "expected_result": "recover new current",
+      "state_change": "new current is published atomically"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "vector_id": "chacha20-poly1305-roundtrip",
+  "protocol_version": "1.0",
+  "cipher_suite": "V1HybridMlKem768",
+  "test_only": true,
+  "inputs": {
+    "hkdf_domain": "LinkChat/test/v1",
+    "ikm_utf8": "ikm",
+    "key_domain": "LinkChat/message/v1",
+    "key_info_utf8": "context",
+    "nonce_domain": "LinkChat/nonce/v1",
+    "nonce_info_utf8": "context",
+    "aad_utf8": "aad",
+    "plaintext_utf8": "plaintext"
+  },
+  "expected": {
+    "open_sealed_ciphertext": true,
+    "changed_aad": "AuthenticationFailed",
+    "changed_ciphertext": "AuthenticationFailed",
+    "key_length": 32,
+    "nonce_length": 12,
+    "tag_length": 16
+  },
+  "note": "The provider derives the key and nonce through its domain-framed HKDF API; callers do not supply arbitrary protocol nonce bytes."
+}

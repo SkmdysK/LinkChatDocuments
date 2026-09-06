@@ -1,0 +1,12 @@
+vector_id	file	kind	protocol_version	cipher_suite	test_only
+identity-binding	identity-binding.json	identity-binding	1.0	V1HybridMlKem768	true
+bootstrap	bootstrap.json	bootstrap	1.0	V1HybridMlKem768	true
+package-structural	package-structural.json	canonical-wire	1.0	V1HybridMlKem768	true
+application-message	application-message.json	canonical-wire	1.0	V1HybridMlKem768	true
+context-aad	context-aad.json	domain-separation	1.0	V1HybridMlKem768	true
+payload-frame	payload-frame.json	canonical-wire	1.0	V1HybridMlKem768	true
+envelope-layout	envelope-layout.json	canonical-wire	1.0	V1HybridMlKem768	true
+hkdf-domain-framing	hkdf-domain-framing.json	primitive-correctness	1.0	V1HybridMlKem768	true
+aead-roundtrip	aead-roundtrip.json	primitive-correctness	1.0	V1HybridMlKem768	true
+kem-boundaries	kem-boundaries.json	primitive-boundary	1.0	V1HybridMlKem768	true
+replay-and-recovery	replay-and-recovery.json	state-and-storage	1.0	V1HybridMlKem768	true

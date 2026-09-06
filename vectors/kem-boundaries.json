@@ -1,0 +1,16 @@
+{
+  "vector_id": "kem-boundaries-v1",
+  "protocol_version": "1.0",
+  "cipher_suite": "V1HybridMlKem768",
+  "test_only": true,
+  "expected": {
+    "x25519_public_and_wrapper_ciphertext_bytes": 32,
+    "mlkem768_public_key_bytes": 1184,
+    "mlkem768_ciphertext_bytes": 1088,
+    "shared_secret_bytes": 32,
+    "valid_encapsulation_decapsulation": true,
+    "x25519_all_zero_input": "LowOrderPoint",
+    "malformed_mlkem_ciphertext": "InvalidCiphertext"
+  },
+  "security_boundary": "These are correctness and input-boundary checks. KEM IND-CCA security remains an external certificate for the named wrapper game."
+}

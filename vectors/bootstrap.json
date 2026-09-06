@@ -1,0 +1,19 @@
+{
+  "vector_id": "bootstrap-session-42",
+  "protocol_version": "1.0",
+  "canonical_format_version": 1,
+  "cipher_suite": "V1HybridMlKem768",
+  "test_only": true,
+  "inputs": {
+    "s0_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+    "session_id": 42,
+    "bootstrap_domain": "LinkChat/bootstrap/v1"
+  },
+  "expected": {
+    "bootstrap_prk_length": 32,
+    "bootstrap_key_length": 32,
+    "bootstrap_context_fields": ["domain", "protocol_major", "protocol_minor", "cipher_suite", "session_id"],
+    "post_bootstrap": "S0, bootstrap PRK, and bootstrap key enter the implementation erase procedure"
+  },
+  "security_boundary": "Bootstrap correctness is specified here; secrecy and erasure of S0 are implementation and platform boundaries."
+}

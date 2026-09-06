@@ -1,0 +1,21 @@
+# macOS metadata
+.DS_Store
+
+# LaTeX build output
+paper/build/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Local editor and temporary files
+*.swp
+*.swo
+*~
+._*

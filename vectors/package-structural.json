@@ -1,0 +1,28 @@
+{
+  "vector_id": "receiver-package-structural-patterns",
+  "protocol_version": "1.0",
+  "canonical_format_version": 1,
+  "cipher_suite": "V1HybridMlKem768",
+  "test_only": true,
+  "inputs": {
+    "cipher_suite_id": 1,
+    "session_id": 42,
+    "turn": 0,
+    "generation": 0,
+    "key_id": 99,
+    "x25519_public_key": {"repeat_byte_hex": "11", "length": 32},
+    "mlkem_public_key": {"repeat_byte_hex": "22", "length": 1184},
+    "mailbox_token": {"repeat_byte_hex": "33", "length": 32},
+    "expiration": 1700000000,
+    "previous_package_hash": {"repeat_byte_hex": "44", "length": 32},
+    "package_auth": {"repeat_byte_hex": "55", "length": 64}
+  },
+  "expected": {
+    "encoded_length": 1439,
+    "raw_canonical_sha256": "6c1c835d117cd1ada828e5129481bb4d5162a1f648b210ca7ecbfed436fe5dae",
+    "prefix_hex": "02000100010000000b00000002000100000008000000000000002a0000000800000000000000000000000800000000000000000000000008000000000000000063000000201111111111111111111111111111111111111111111111111111111111111111",
+    "suffix_hex": "5555555555555555555555555555555555555555555555555555555555555555",
+    "decode_reencode_equal": true
+  },
+  "note": "The repeated-byte public-key and signature fields are structural placeholders and are not valid production credentials."
+}

@@ -1,0 +1,17 @@
+# Link Chat Protocol Research Specification
+
+- [00. Overview and Research Position](spec/00-overview.md)
+- [01. Terms, Notation, and Normative Language](spec/01-terminology.md)
+- [02. Architecture and State Ownership](spec/02-architecture.md)
+- [03. Identity, Bootstrap, and Session Initialization](spec/03-identity-session.md)
+- [04. Cryptographic Profile](spec/04-cryptographic-profile.md)
+- [05. Canonical Encoding and Wire Format](spec/05-wire-format.md)
+- [06. Application State Machine](spec/06-state-machine.md)
+- [07. Transport and Mailbox Interfaces](spec/07-transport-mailbox.md)
+- [08. Storage, Commit, and Recovery](spec/08-storage-and-recovery.md)
+- [09. Security Model and Research Properties](spec/09-security-model.md)
+- [10. Formal Verification and Trust Boundaries](spec/10-formal-verification.md)
+- [11. Conformance and Test Vectors](spec/11-conformance.md)
+- [12. Versioning and Extensions](spec/12-versioning.md)
+- [13. End-to-End Reproducible Example](spec/13-end-to-end-example.md)
+- [Test Vector Directory](vectors/README.md)

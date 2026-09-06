@@ -1,0 +1,30 @@
+{
+  "vector_id": "envelope-4096-structural-layout",
+  "protocol_version": "1.0",
+  "canonical_format_version": 1,
+  "cipher_suite": "V1HybridMlKem768",
+  "test_only": true,
+  "inputs": {
+    "mailbox_token": {"repeat_byte_hex": "aa", "length": 32},
+    "x25519_kem_ciphertext": {"repeat_byte_hex": "01", "length": 32},
+    "mlkem_ciphertext": {"repeat_byte_hex": "02", "length": 1088},
+    "encrypted_header": {"repeat_byte_hex": "03", "length": 1604},
+    "ciphertext": {"repeat_byte_hex": "04", "length": 1307},
+    "padding": {"hex": ""}
+  },
+  "expected": {
+    "encoded_length": 4096,
+    "raw_canonical_sha256": "2982dc740d3b53fda600466ea01c5bf176c36e68b883ccc89b2f1333bf07ca13",
+    "fields": [
+      {"name": "object_header", "offset": 0, "length": 9},
+      {"name": "mailbox_token", "offset": 9, "field_total_length": 36, "value_length": 32},
+      {"name": "x25519_kem_ciphertext", "offset": 45, "field_total_length": 36, "value_length": 32},
+      {"name": "mlkem_ciphertext", "offset": 81, "field_total_length": 1092, "value_length": 1088},
+      {"name": "encrypted_header", "offset": 1173, "field_total_length": 1608, "value_length": 1604},
+      {"name": "ciphertext", "offset": 2781, "field_total_length": 1311, "value_length": 1307},
+      {"name": "padding", "offset": 4092, "field_total_length": 4, "value_length": 0}
+    ],
+    "decode_reencode_equal": true
+  },
+  "construction": "object_header(0x03, version=1.0, fields=6) followed by six u32_be-length-prefixed values"
+}
